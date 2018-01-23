@@ -47,7 +47,9 @@ def count_elements(data)
           counter.each do |nombre, count|
             if nombre == value[:name]
               count +=1
+              binding.pry
             end
+
           end
       else
           counter << {:name => value[:name], :count => 1 }
