@@ -108,5 +108,5 @@ def organize_schools(hash)
   end
 
   organized
-  
+
 end
