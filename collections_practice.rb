@@ -97,5 +97,16 @@ def find_cool(array)
 end
 
 def organize_schools(hash)
-hash
+  organized = {}
+
+  hash.each do |school, location_hash|
+    if organized.keys.include?(location_hash[:location])
+      organized[location_hash[:location]] << school
+    else
+      organized[location_hash[:location]] = [school]
+    end
+  end
+
+  organized
+  
 end
