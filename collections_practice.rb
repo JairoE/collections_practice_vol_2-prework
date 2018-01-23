@@ -50,7 +50,7 @@ def count_elements(data)
           counter.each do |nombre|
             if nombre[:name] == value[:name]
               nombre[:count] = nombre[:count] + 1
-              binding.pry
+
             end
 
           end
