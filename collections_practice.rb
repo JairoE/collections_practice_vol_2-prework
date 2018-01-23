@@ -73,13 +73,14 @@ def count_elements(data)
 end
 
 def merge_data(array, array2)
-  binding.pry
-  # array.each do |person|
-  #   array2.each do |hash|
-  #     if hash[person[:first_name]].each do |fact, value|
-  #     end
-  #   end
-  # end
+
+   array.each do |person|
+     array2[0][person[:first_name]].each do |fact, value|
+       person[:first_name][fact] = value
+     end
+   end
+
+   array
 
 end
 
