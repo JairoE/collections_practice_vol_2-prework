@@ -45,7 +45,7 @@ def count_elements(data)
 
     if counter != []
       counter_names = counter.collect {|hash| hash[:name]}
-      binding.pry
+
       if counter_names.include?(value[:name])
           counter.each do |nombre|
             if nombre[:name] == value[:name]
