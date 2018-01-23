@@ -88,7 +88,7 @@ def find_cool(array)
   cool_ppl = []
   array.each do |person|
     if person[:temperature] == "cool"
-      cool_ppl << {person}
+      cool_ppl << person
     end
   end
 
