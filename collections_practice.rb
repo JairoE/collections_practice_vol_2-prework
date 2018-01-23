@@ -77,6 +77,9 @@ def merge_data(array, array2)
   array.each do |person|
     array2.each do |hash|
       if hash[person[:first_name]].each do |fact, value|
+      end
+    end
+  end
 
 end
 
