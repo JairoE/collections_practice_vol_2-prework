@@ -37,14 +37,23 @@ def remove_non_strings(array)
   end
 end
 
-def count_elements(array, element)
-  counter = 0
-  array.each do |x|
-    if x == element
-      counter+=1
+def count_elements(data)
+  counter = []
+  data.each do |value|
+    if !count.include?(value)
+      counter << {:name => value, :count => 1 }
+    else
+      counter.each do |name, count|
+        if name == value
+          count = count + 1
+        end
+      end
     end
   end
+
   counter
+
+
 
 end
 
