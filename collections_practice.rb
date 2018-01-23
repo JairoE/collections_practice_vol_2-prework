@@ -73,7 +73,11 @@ def count_elements(data)
 end
 
 def merge_data(array, array2)
-  array << array2
+  binding.pry
+  array.each do |person|
+    array2.each do |hash|
+      if hash[person[:first_name]].each do |fact, value|
+
 end
 
 def find_cool(hash)
