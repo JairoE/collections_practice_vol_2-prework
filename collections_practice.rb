@@ -41,7 +41,7 @@ def count_elements(data)
   counter = []
   data.each do |value|
     if !counter.include?(value)
-      counter << {:name => value, :count => 1 }
+      counter << {:name => value[:name], :count => 1 }
     else
       counter.each do |name, count|
         if name == value
