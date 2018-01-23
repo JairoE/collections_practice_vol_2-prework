@@ -74,9 +74,9 @@ end
 
 def merge_data(array, array2)
 
-   array.each do |person|
+   array.each_with_index do |person, i|
      array2[0][person[:first_name]].each do |fact, value|
-       person[:first_name][fact] = value
+       array[i][fact] = value
      end
    end
 
