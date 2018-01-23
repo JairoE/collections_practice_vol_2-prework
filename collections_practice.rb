@@ -97,13 +97,5 @@ def find_cool(array)
 end
 
 def organize_schools(array)
-  array.sort do |a,b|
-    if a==b
-      0
-    elsif a < b
-      -1
-    elsif a > b
-      1
-    end
-  end
+  binding.pry
 end
