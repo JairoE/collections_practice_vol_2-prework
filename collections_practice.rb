@@ -40,16 +40,24 @@ end
 def count_elements(data)
   counter = []
   data.each do |value|
-    if !counter.keys.include?(value[:name])
-      counter << {:name => value[:name], :count => 1 }
-    else
-      counter.each do |name, count|
-        if name == value
-          count = count + 1
-        end
+
+    if counter != []
+      counter_names = counter.collect {|hash| hash[:name]}
+      if counter_names.include?(value[:name])
+          counter.each do |nombre, count|
+            if nombre == value[:name]
+              count +=1
+            end
+          end
+      else
+          counter << {:name => value[:name], :count => 1 }
       end
+    else
+      counter << {:name => value[:name], :count => 1 }
     end
   end
+
+
 
   counter
 
