@@ -84,10 +84,16 @@ def merge_data(array, array2)
 
 end
 
-def find_cool(hash)
-  hash.each_with_index do |x,i|
-    hash[i] == 'cool'
+def find_cool(array)
+  cool_ppl = []
+  array.each do |person|
+    if person[:temperature] == "cool"
+      cool_ppl << {person}
+    end
   end
+
+  cool_ppl
+
 end
 
 def organize_schools(array)
